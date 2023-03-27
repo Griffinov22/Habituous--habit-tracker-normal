@@ -33,6 +33,7 @@ body {
   font-family: "Arimo";
   background: url("../images/marble-background.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100dvw;
   height: 100dvh;
@@ -64,6 +65,19 @@ header image {
   height: 100%;
 }
 
+form {
+  display: block;
+  position: absolute;
+  width: 30rem;
+  height: max-content;
+  margin: auto;
+  padding: 0 2rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s ease-out;
+}
 /* input boxes */
 input {
   padding: var(--padding);
@@ -94,34 +108,54 @@ button {
   justify-content: space-evenly;
   width: 100%;
 }
+/* if flex horizontal has text inputs space them out */
+.flex-horiz:has([type="text"]) {
+  justify-content: space-between;
+  gap: 10%;
+}
 
 /* Unique CSS Items */
+button[value="go-back"] {
+  background-color: var(--black-80);
+  color: white;
+}
+button[value="go-back"]:hover {
+  background-color: var(--black-100);
+}
+
 .form-wrapper {
   position: relative;
-  width: 41.67rem;
-  margin: auto;
+  width: 30rem;
+  height: 30rem;
+  background-color: beige;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
+  overflow: hidden;
 }
 
 .sign-in-form {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 0.75rem;
 }
 .sign-in-form h2 {
   background-color: white;
+  position: relative;
+  top: 0;
   width: fit-content;
   padding: 0.25rem 0.5rem;
   font-weight: 600;
   border-radius: 10px;
+  box-shadow: 0px 1px 3px var(--black-60);
 }
 .sign-in-form [type="text"] {
   width: 100%;
-  max-width: 20rem;
 }
 
-.form-slider-div {
-  white-space: nowrap;
+#form2 {
+  left: 110%;
 }

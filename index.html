@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./css/index.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./images/favicon/cube.ico" />
+    <script src="./js/index.js" defer></script>
     <title>Habituous - Good Habits Made Easy</title>
   </head>
   <body>
@@ -15,7 +16,7 @@
         <img src="./images/cube.svg" alt="" />
       </header>
       <div class="form-slider-div">
-        <form class="sign-in-form">
+        <form class="sign-in-form" id="form1">
           <input
             type="text"
             name="username..."
@@ -35,11 +36,31 @@
           <h2>Don't have an account with us?</h2>
           <button type="button" value="sign-up">sign-up</button>
         </form>
-        <form class="sign-in-form">
+        <form class="sign-in-form" id="form2">
+          <div class="flex-horiz">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="first name"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="last name"
+              required
+            />
+          </div>
           <input
             type="text"
-            name="username..."
-            placeholder="username"
+            name="username"
+            placeholder="username..."
+            required
+          />
+          <input
+            type="text"
+            name="password"
+            placeholder="password..."
             required
           />
           <input
@@ -49,31 +70,10 @@
             required
           />
           <div class="flex-horiz">
+            <button type="button" value="go-back">&#8610;</button>
             <button type="button">clear entry</button>
             <button type="submit" value="submit">submit</button>
           </div>
-          <h2>Don't have an account with us?</h2>
-          <button type="button" value="sign-up">sign-up</button>
-        </form>
-        <form class="sign-in-form">
-          <input
-            type="text"
-            name="username..."
-            placeholder="username"
-            required
-          />
-          <input
-            type="text"
-            name="password"
-            placeholder="password..."
-            required
-          />
-          <div class="flex-horiz">
-            <button type="button">clear entry</button>
-            <button type="submit" value="submit">submit</button>
-          </div>
-          <h2>Don't have an account with us?</h2>
-          <button type="button" value="sign-up">sign-up</button>
         </form>
       </div>
     </div>
